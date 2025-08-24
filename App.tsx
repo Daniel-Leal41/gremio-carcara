@@ -13,8 +13,8 @@ const App: React.FC = () => {
           Em breve...
         </h1>
       </div>
-      <footer className="absolute bottom-5 text-center w-full">
-        <p className="text-gray-600 text-sm">© 2025 Grêmio Carcará</p>
+      <footer className="absolute bottom-5 text-center w-full" role="contentinfo">
+        <p className="text-gray-400 text-sm">© 2025 Grêmio Carcará</p>
       </footer>
     </main>
   );
