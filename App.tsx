@@ -14,7 +14,7 @@ const App: React.FC = () => {
         </h1>
       </div>
       <footer className="absolute bottom-5 text-center w-full">
-        <p className="text-gray-600 text-sm">© 2024 Grêmio Carcará</p>
+        <p className="text-gray-600 text-sm">© 2025 Grêmio Carcará</p>
       </footer>
     </main>
   );
