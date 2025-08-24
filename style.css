@@ -1,0 +1,209 @@
+/* ===================================== */
+/*  ESTILO FINAL - SÓBRIO & PROFISSIONAL */
+/* ===================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+    /* Fundo preto absoluto para máximo contraste e seriedade */
+    background-color: #000000;
+    color: #EAEAEA;
+    overflow: hidden;
+}
+
+/* ======================== */
+/*  CABEÇALHO               */
+/* ======================== */
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 25px 0;
+    z-index: 1000;
+    background: transparent;
+    /* Borda sutil para separar o cabeçalho, quase invisível */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); 
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-brand {
+    text-decoration: none;
+    font-size: 1.6rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: all 0.3s ease;
+    /* Cor do logo permanece como ponto de identidade visual */
+    color: #F5A623; 
+}
+
+.logo-brand:hover {
+    opacity: 0.8;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 35px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #A0A0A0; /* Cinza para não competir com o título */
+    font-size: 0.95rem;
+    font-weight: 400;
+    position: relative;
+    padding-bottom: 5px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background: #F5A623;
+    transition: width 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: #FFFFFF;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* ======================== */
+/*  CONTEÚDO PRINCIPAL      */
+/* ======================== */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+/* A MUDANÇA PRINCIPAL ESTÁ AQUI */
+h1 {
+    font-size: 5rem;
+    font-weight: 400; /* Peso normal, mais elegante que bold */
+    text-transform: uppercase; /* CAIXA ALTA para um tom formal */
+    letter-spacing: 10px; /* Espaçamento amplo, visual de luxo */
+    margin-bottom: 25px;
+    color: #FFFFFF; /* Título principal em branco para máximo impacto */
+    text-shadow: none; /* Remove qualquer brilho, focando na forma */
+    
+    animation: fadeInClean 3s ease-out;
+}
+
+.container p {
+    font-size: 1rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #F5A623; /* A cor agora serve como um subtítulo de destaque */
+    
+    animation: fadeInSubtitle 3.5s ease-out;
+}
+
+/* ANIMAÇÕES LIMPAS E DIRETAS */
+@keyframes fadeInClean {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInSubtitle {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ======================== */
+/*  RODAPÉ                  */
+/* ======================== */
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 25px 0;
+    background-color: transparent;
+    border-top: 1px solid rgba(255, 255, 255, 0.1); /* Borda sutil */
+    z-index: 10;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between; /* Alinha itens nas pontas */
+    align-items: center;
+}
+
+.social-links a {
+    color: #A0A0A0;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.social-links a:hover {
+    color: #F5A623;
+    transform: scale(1.1);
+}
+
+.footer-container p {
+    margin: 0;
+    font-size: 0.85rem;
+    color: #666; /* Cor bem escura para não chamar atenção */
+    font-weight: 300;
+}
+
+/* ======================== */
+/*  RESPONSIVIDADE          */
+/* ======================== */
+@media (max-width: 768px) {
+    h1 { font-size: 2.5rem; letter-spacing: 8px; }
+    .container p { font-size: 0.9rem; }
+    
+    header { padding: 20px 0; }
+    .header-container { flex-direction: column; gap: 15px; }
+    .logo-brand { font-size: 1.5rem; }
+    
+    .footer-container { flex-direction: column; gap: 10px; }
+}

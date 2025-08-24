@@ -1,56 +1,50 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grêmio Carcará - Em Breve</title>
-    <!--
-        Como a solicitação é "apenas html", estou usando estilos inline e dentro do próprio arquivo.
-        Em um projeto real, os estilos seriam em um arquivo CSS separado.
-    -->
-    <style>
-        body {
-            background-color: #000000; /* Preto */
-            color: #FF8C00; /* Laranja (DarkOrange é uma boa tonalidade) */
-            font-family: 'Arial', sans-serif;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh; /* Ocupa a altura total da viewport */
-            margin: 0;
-            text-align: center;
-        }
-
-        h1 {
-            font-size: 4em; /* Tamanho grande para o título */
-            margin-bottom: 0.5em;
-            text-transform: uppercase; /* Deixa o texto em maiúsculas */
-            letter-spacing: 5px; /* Espaçamento entre as letras */
-            border: 2px solid #FF8C00; /* Borda laranja */
-            padding: 10px 20px;
-            display: inline-block; /* Para a borda envolver o texto */
-        }
-
-        p {
-            font-size: 2em; /* Tamanho bom para a mensagem */
-            margin-top: 0;
-        }
-
-        /* Um toque extra: animação sutil para o texto "Em Breve..." */
-        @keyframes pulse {
-            0% { transform: scale(1); opacity: 1; }
-            50% { transform: scale(1.05); opacity: 0.8; }
-            100% { transform: scale(1); opacity: 1; }
-        }
-
-        .pulsing-text {
-            animation: pulse 2s infinite alternate; /* Aplica a animação */
-        }
-    </style>
+    <title>Em Breve...</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap" rel="stylesheet">
+    
+    <!-- ADICIONE ESTA LINHA PARA OS ÍCONES -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 </head>
 <body>
-    <h1>Grêmio Carcará</h1>
-    <p class="pulsing-text">Em Breve...</p>
+  <!-- INÍCIO DO CABEÇALHO -->
+<header>
+    <div class="header-container">
+        <a href="#" class="logo-brand">
+            <!-- Se você tiver um logo, descomente a linha abaixo e mude o src -->
+            <!-- <img src="logo.png" alt="Logo do Grêmio"> -->
+            <span>Grêmio Carcará</span>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="#">Início</a></li>
+                <li><a href="#">Eventos</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<!-- FIM DO CABEÇALHO -->
+    <div class="container">
+        <h1>Em breve...</h1>
+    </div>
+    <!-- INÍCIO DO RODAPÉ -->
+<footer>
+    <div class="footer-container">
+        <div class="social-links">
+            <a href="https://www.instagram.com/carcara_euc/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+        <p>&copy; 2025 IFBA Euclides da Cunha - Ba.</p>
+    </div>
+</footer>
+<!-- FIM DO RODAPÉ -->
 </body>
 </html>
