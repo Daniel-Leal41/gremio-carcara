@@ -155,7 +155,7 @@ nav ul li a:hover::after { width: 100%; }
 }
 
 .proposal-link::after {
-    content: ' →'; /* Adiciona uma seta */
+    content: ' →'; /* Adiciona uma seta 3*/
 }
 
 .proposal-link:hover {
