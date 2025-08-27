@@ -132,6 +132,25 @@ nav ul li a:hover::after { width: 100%; }
 /* NOVA REGRA PARA ESTILIZAR O TEXTO VISÍVEL */
 .proposal-card .full-text p { font-size: 1rem; font-weight: 300; line-height: 1.7; color: #A0A0A0; }
 
+/* ESTILO PARA O LINK "SAIBA MAIS" */
+.proposal-link {
+    display: inline-block;
+    margin-top: 20px;
+    color: #F5A623;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: letter-spacing 0.3s ease;
+}
+
+.proposal-link::after {
+    content: ' →'; /* Adiciona uma seta */
+}
+
+.proposal-link:hover {
+    letter-spacing: 1px;
+}
+
 
 /*  RODAPÉ    */
 footer { position: relative; padding: 40px 0; background-color: #000000; border-top: 1px solid rgba(255, 255, 255, 0.1); }
