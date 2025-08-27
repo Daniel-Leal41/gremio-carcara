@@ -130,7 +130,18 @@ nav ul li a:hover::after { width: 100%; }
 
 .proposal-card h4 { font-size: 1.3rem; font-weight: 600; color: #EAEAEA; margin-bottom: 10px; }
 /* NOVA REGRA PARA ESTILIZAR O TEXTO VISÍVEL */
-.proposal-card .full-text p { font-size: 1rem; font-weight: 300; line-height: 1.7; color: #A0A0A0; }
+/* Esconde o texto completo na página principal */
+.full-text {
+    display: none;
+}
+
+/* Estiliza o parágrafo de resumo visível no card */
+.proposal-card p.proposal-summary {
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.7;
+    color: #A0A0A0;
+}
 
 /* ESTILO PARA O LINK "SAIBA MAIS" */
 .proposal-link {
