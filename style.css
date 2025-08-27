@@ -129,7 +129,6 @@ nav ul li a:hover::after { width: 100%; }
 }
 
 .proposal-card h4 { font-size: 1.3rem; font-weight: 600; color: #EAEAEA; margin-bottom: 10px; }
-/* NOVA REGRA PARA ESTILIZAR O TEXTO VISÍVEL */
 /* Esconde o texto completo na página principal */
 .full-text {
     display: none;
@@ -142,7 +141,6 @@ nav ul li a:hover::after { width: 100%; }
     line-height: 1.7;
     color: #A0A0A0;
 }
-
 /* ESTILO PARA O LINK "SAIBA MAIS" */
 .proposal-link {
     display: inline-block;
