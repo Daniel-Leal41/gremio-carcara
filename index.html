@@ -3,48 +3,133 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Em Breve...</title>
+    <title>Grêmio Carcará</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap" rel="stylesheet">
-    
-    <!-- ADICIONE ESTA LINHA PARA OS ÍCONES -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 </head>
 <body>
-  <!-- INÍCIO DO CABEÇALHO -->
-<header>
-    <div class="header-container">
-        <a href="#" class="logo-brand">
-            <!-- Se você tiver um logo, descomente a linha abaixo e mude o src -->
-            <!-- <img src="logo.png" alt="Logo do Grêmio"> -->
-            <span>Grêmio Carcará</span>
-        </a>
-        <nav>
-            <ul>
-                <li><a href="#">Início</a></li>
-                <li><a href="#">Eventos</a></li>
-                <li><a href="#">Contato</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
-<!-- FIM DO CABEÇALHO -->
-    <div class="container">
-        <h1>Em breve...</h1>
-    </div>
-    <!-- INÍCIO DO RODAPÉ -->
-<footer>
-    <div class="footer-container">
-        <div class="social-links">
-            <a href="https://www.instagram.com/carcara_euc/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                <i class="fab fa-instagram"></i>
+
+    <!-- CABEÇALHO -->
+    <header>
+        <div class="header-container">
+            <a href="#" class="logo-brand">
+                <span>Grêmio Carcará</span>
             </a>
+            <nav>
+                <ul>
+                    <li><a href="#">Início</a></li>
+                    <li><a href="#propostas">Propostas</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
         </div>
-        <p>&copy; 2025 IFBA Euclides da Cunha - Ba.</p>
-    </div>
-</footer>
-<!-- FIM DO RODAPÉ -->
+    </header>
+
+    <!-- NOVA SEÇÃO DE BOAS-VINDAS (HERO) -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1>Sua Voz, Nossa Luta</h1>
+            <p>Conheça as propostas que vão fortalecer nossa comunidade estudantil.</p>
+            <a href="#propostas" class="cta-button">Ver Propostas</a>
+        </div>
+    </section>
+
+    <!-- SEÇÃO DE PROPOSTAS -->
+    <main id="propostas" class="proposals-section">
+        <div class="proposals-container">
+            <h2>Nossas Propostas</h2>
+
+            <!-- Categoria: Apoio ao Estudante -->
+            <div class="proposal-category">
+                <h3>Apoio Ao Estudante e Segurança 🧑‍🎓</h3>
+                <div class="proposal-card">
+                    <h4>Regularização do calendário de pagamentos 🤑</h4>
+                    <p>A fome não espera ninguém! Não podemos deixar que as pessoas que necessitam dos auxílios financeiros do IFBA passem necessidade por causa dos atrasos frequentes nos depósitos.</p>
+                </div>
+                <div class="proposal-card">
+                    <h4>Denúncias Contra Assédio 👮</h4>
+                    <p>Nossa chapa acredita que a escola deve ser um ambiente seguro e acolhedor para todos. É fundamental garantir canais adequados para denúncias, com sigilo e acolhimento.</p>
+                </div>
+                <div class="proposal-card">
+                    <h4>Representação estudantil na comissão do PAAE ☝️</h4>
+                    <p>A comissão do PAAE será reformulada em Outubro. Precisamos lutar por uma maior representação estudantil. Afinal, nós somos quem mais sabemos do que precisamos.</p>
+                    <a href="#" class="proposal-link">Clique aqui e saiba mais!</a>
+                </div>
+            </div>
+
+            <!-- Categoria: Esportes -->
+            <div class="proposal-category">
+                <h3>Esportes ⚽️</h3>
+                 <div class="proposal-card">
+                    <h4>Auxílio transporte esportivo 🚃</h4>
+                    <p>Propomos a criação de um auxílio transporte, vinculado ao PAAE, para alunos de baixa renda de localidades que não oferecem esse suporte para atividades extracurriculares. E já confirmamos: a escola TEM recursos para isso!</p>
+                    <a href="#" class="proposal-link">Clique aqui e saiba mais!</a>
+                </div>
+                <div class="proposal-card">
+                    <h4>Competições e amistosos na região 🏐</h4>
+                    <p>Para preparar nossas equipes para o JIFBA, iremos buscar a realização de amistosos com escolas da região e trazer outros campi do IFBA para jogar em nossa casa.</p>
+                    <a href="#" class="proposal-link">Clique aqui e saiba mais!</a>
+                </div>
+                 <div class="proposal-card">
+                    <h4>Torneios e partidas internas ⬇️</h4>
+                    <p>É essencial ter momentos de descontração. Queremos implementar a realização de mais torneios e partidas entre os próprios estudantes da instituição!</p>
+                    <a href="#" class="proposal-link">Clique aqui e saiba mais!</a>
+                </div>
+            </div>
+
+            <!-- Categoria: Cultura -->
+            <div class="proposal-category">
+                <h3>Cultura 🎭️</h3>
+                <div class="proposal-card">
+                    <h4>Manutenção de projetos já existentes 👷‍♀️</h4>
+                    <p>Além da criação de novos projetos, também é essencial que a instituição mantenha e amplie as manifestações culturais já existentes no IFBA.</p>
+                </div>
+                <div class="proposal-card">
+                    <h4>Projeto Clube do Livro 📚️</h4>
+                    <p>Um espaço de diálogo para escolher obras em conjunto e debatê-las em encontros regulares, fortalecendo o pensamento crítico e a integração entre alunos de diferentes cursos.</p>
+                    <a href="#" class="proposal-link">Clique aqui e saiba mais!</a>
+                </div>
+                <div class="proposal-card">
+                    <h4>Projeto Cubo Mágico 🧩</h4>
+                    <p>Um projeto para estimular o raciocínio lógico com campeonatos, oficinas para iniciantes e um clube semanal, desenvolvendo habilidades como concentração e paciência.</p>
+                    <a href="#" class="proposal-link">Clique aqui e saiba mais!</a>
+                </div>
+                <div class="proposal-card">
+                    <h4>Oficina de Canto 🎤</h4>
+                    <p>Um espaço de descontração e expressão artística para explorar diferentes gêneros musicais, contribuindo para um clima escolar mais acolhedor e dinâmico.</p>
+                    <a href="#" class="proposal-link">Clique aqui e saiba mais!</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer>
+        <div class="footer-container">
+            <div class="social-links">
+                <a href="https://www.instagram.com/SEU_USUARIO_AQUI" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+            <p>&copy; 2025 Grêmio Carcará. IFBA - Euclides da Cunnha.</p>
+        </div>
+    </footer>
+
+    <!-- SCRIPT PARA ANIMAÇÕES DE ROLAGEM -->
+    <script>
+        const cards = document.querySelectorAll('.proposal-card');
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+        cards.forEach(card => observer.observe(card));
+    </script>
 </body>
 </html>
