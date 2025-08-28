@@ -8,14 +8,26 @@ html {
     scroll-behavior: smooth;
 }
 
-body, html {
+body {
     font-family: 'Poppins', sans-serif;
     color: #EAEAEA;
     overflow-x: hidden;
-    /* FUNDO DINÂMICO */
     background: linear-gradient(-45deg, #000000, #0a0a1a, #0D0D0D, #1a1a2a);
     background-size: 400% 400%;
     animation: animatedGradient 20s ease infinite;
+
+    /* --- CORREÇÃO DEFINITIVA DO RODAPÉ --- */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.content-wrapper {
+    flex: 1 0 auto; /* Permite que o conteúdo cresça e ocupe o espaço */
+}
+
+footer {
+    flex-shrink: 0; /* Impede que o rodapé encolha */
 }
 
 @keyframes animatedGradient {
@@ -23,7 +35,6 @@ body, html {
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
 }
-
 
 /*  CABEÇALHO  */
 header {
@@ -48,15 +59,15 @@ nav ul li a::after { content: ''; position: absolute; width: 0; height: 1px; bot
 nav ul li a:hover { color: #FFFFFF; }
 nav ul li a:hover::after { width: 100%; }
 
-
 /*  SEÇÃO HERO */
 .hero-section {
     display: flex;
     align-items: center;
     justify-content: center;
+    /* Adiciona padding-top para compensar o header fixo */
+    padding-top: 80px; 
     min-height: 100vh;
     text-align: center;
-    padding: 0 20px;
 }
 
 .hero-content h1 {
@@ -98,10 +109,11 @@ nav ul li a:hover::after { width: 100%; }
     box-shadow: 0 10px 20px rgba(245, 166, 35, 0.25);
 }
 
-
 /*  SEÇÃO DE PROPOSTAS */
-.proposals-section { padding: 100px 0; }
-.proposals-container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+.proposals-section { 
+    padding: 100px 20px; 
+}
+.proposals-container { max-width: 900px; margin: 0 auto; }
 .proposals-container h2 { font-size: 2.5rem; font-weight: 600; text-align: center; text-transform: uppercase; letter-spacing: 5px; color: #F5A623; margin-bottom: 80px; }
 .proposal-category { margin-bottom: 80px; }
 .proposal-category h3 { font-size: 1.8rem; font-weight: 600; color: #FFFFFF; margin-bottom: 30px; padding-bottom: 15px; border-bottom: 1px solid rgba(255, 255, 255, 0.15); }
@@ -129,45 +141,23 @@ nav ul li a:hover::after { width: 100%; }
 }
 
 .proposal-card h4 { font-size: 1.3rem; font-weight: 600; color: #EAEAEA; margin-bottom: 10px; }
-/* Esconde o texto completo na página principal */
-.full-text {
-    display: none;
-}
-
-/* Estiliza o parágrafo de resumo visível no card */
-.proposal-card p.proposal-summary {
-    font-size: 1rem;
-    font-weight: 300;
-    line-height: 1.7;
-    color: #A0A0A0;
-}
-/* ESTILO PARA O LINK "SAIBA MAIS" */
-.proposal-link {
-    display: inline-block;
-    margin-top: 20px;
-    color: #F5A623;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 0.9rem;
-    transition: letter-spacing 0.3s ease;
-}
-
-.proposal-link::after {
-    content: ' →'; /* Adiciona uma seta 3*/
-}
-
-.proposal-link:hover {
-    letter-spacing: 1px;
-}
-
+.full-text { display: none; }
+.proposal-card p.proposal-summary { font-size: 1rem; font-weight: 300; line-height: 1.7; color: #A0A0A0; }
+.proposal-link { display: inline-block; margin-top: 20px; color: #F5A623; text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: letter-spacing 0.3s ease; }
+.proposal-link::after { content: ' →'; }
+.proposal-link:hover { letter-spacing: 1px; }
 
 /*  RODAPÉ    */
-footer { position: relative; padding: 40px 0; background-color: #000000; border-top: 1px solid rgba(255, 255, 255, 0.1); }
+footer { 
+    position: relative; 
+    padding: 40px 0; 
+    background-color: #000000; 
+    border-top: 1px solid rgba(255, 255, 255, 0.1); 
+}
 .footer-container { max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; flex-direction: column; align-items: center; gap: 15px; }
 .social-links a { color: #A0A0A0; font-size: 1.5rem; text-decoration: none; transition: all 0.3s ease-in-out; }
 .social-links a:hover { color: #F5A623; transform: scale(1.1); }
 .footer-container p { margin: 0; font-size: 0.85rem; color: #666; font-weight: 300; }
-
 
 /*  ANIMAÇÕES DE ENTRADA    */
 @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
@@ -175,8 +165,14 @@ footer { position: relative; padding: 40px 0; background-color: #000000; border-
 @keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
 
 /*  PÁGINA DE CONTATO */
-.contact-section { display: flex; align-items: center; justify-content: center; min-height: 100vh; padding: 120px 20px 40px; }
-.contact-container { max-width: 900px; width: 100%; text-align: center; }
+.contact-section { 
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    /* Adiciona padding-top para compensar o header fixo */
+    padding-top: 80px; 
+}
+.contact-container { max-width: 900px; width: 100%; text-align: center; padding: 40px 20px; }
 .contact-container h1 { font-size: 3.5rem; font-weight: 700; color: #FFFFFF; margin-bottom: 15px; animation: fadeInDown 1s ease-out; }
 .contact-container p { font-size: 1.1rem; color: #A0A0A0; margin-bottom: 60px; animation: fadeIn 1.5s ease-out; }
 .contact-methods { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; }
@@ -203,7 +199,7 @@ footer { position: relative; padding: 40px 0; background-color: #000000; border-
     .hero-content p { font-size: 1rem; }
     header { padding: 15px 0; }
     .header-container { flex-direction: column; gap: 15px; }
-    .proposals-section { padding: 60px 0; }
+    .proposals-section { padding: 60px 20px; }
     .contact-container h1 { font-size: 2.5rem; }
     .contact-methods { flex-direction: column; align-items: center; }
     .contact-card { width: 100%; max-width: 350px; }
